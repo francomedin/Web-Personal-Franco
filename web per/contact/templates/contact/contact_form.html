@@ -1,0 +1,75 @@
+{%extends 'core/base.html'%}
+
+{%block background%} {%load static%} {%static 'core/img/contact-bg.jpg'%} {%endblock%}
+
+{%block title%}Contacto{%endblock%}
+
+
+
+
+
+{%block header%}
+<h1>Contacto</h1>
+<span class="subheading"></span>
+
+<section class="page-section about-heading">
+    <div class="container">
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Enviame tus dudas</span>
+                        </h2>
+                        {%if 'ok' in request.GET%}
+                        <p>Su mensaje se ha enviado correctamente.</p>
+                        {%endif%}
+
+                        <form action="" method="POST" onsubmit="Correcto()">
+                            {% csrf_token %}
+
+                            <div class="form-group">
+                                
+                                <div class="input-group mb-4">
+                                    {{form.name}}
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    
+                                    <div class="input-group">
+                                        {{form.email}}
+                                    </div>
+
+
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <div class="input-group">
+                                        {{form.content}}
+                                    </div>
+                                    {{form.content.errors}}
+
+                                </div>
+                                <div class="text-center">
+                                    <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
+                                </div>
+                                <br>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function Correcto(){
+        alert("Mensaje enviado correctamente")
+    }
+</script>
+
+
+
+{%endblock%}
+

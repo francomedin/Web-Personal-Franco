@@ -1,0 +1,39 @@
+{%extends 'core/base.html'%}
+
+{%block background%} {%load static%} {%static 'core/img/about-bg.jpg'%} {%endblock%}
+
+{%block title%}Acerca de {%endblock%}
+
+
+
+
+
+{%block header%}
+<h1>Acerca de</h1>
+<span class="subheading">un poco de mi</span>
+{%endblock%}
+
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid avatar" src="{%static 'core/img/avatar.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading">Franco Medina</h2>
+            <p>Bienvenidos a mi página! Es un gusto compartirles un poco de mi, me llamo Franco Medina. </p>
+            <p>Actualmente estoy residiendo en Córdoba capital (Argentina). </p>
+            <p>Recuerdo, una vez estaba realizando una entrevista de trabajo y me preguntaron ¿Con que objeto te identificas? Como adivinaste, en ese momento no se me ocurrió nada.</p>
+            <p>Luego de varias semanas, de repente esta pregunta se contestó, ¡Soy una esponja! Me encanta aprender y "absorber conocimiento" como la esponja lo hace con el agua.</p>
+            <p>Un día típico en mi vida, me voy a encontrar leyendo sobre tecnología, finanzas o astronomía. Estas 3 áreas me encantan.</p>
+            <p>Me gusta conocer personas nuevas, compartir charlas, conocimientos y viajes. Si tuviera que elegir una comida para compartir, seguro sería una merienda.</p> 
+            <p>¿Porque Python? Principalmente porque quiero ser analista de datos y es un lenguaje que cuenta con muchas librerías y comunidad para estas tareas, lo cual no quiere decir que no aprenderé otros lenguajes.
+                Actualmente estoy desarrollando Aplicaciones Web con su framework Django.(PD: Esta página se desarrollo con estas tecnologías).
+            </p>
+            <p>Tambien estoy aprendiendo Ingles ya que lo considero una herramienta fundamental para mi profesión y la vida.</p>
+            <p>Este año, 2021, finalizo la Tecnicatura en Programacion (UTN) y el Bachiller en Ciencias Economicas (UNC FCE), te invito a que conozcas mi tesis "Corexchange" en el apartado <a href="{%url 'portfolio'%}">Portfolio</a>.</p>
+        </div>
+    </div>
+</div>
+<hr>
+{%endblock%}
